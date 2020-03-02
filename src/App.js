@@ -23,12 +23,21 @@ const App = () => {
     ]
   };
 
+  // set up reducer and initial state
   const reducer = (state, action) => {
-    return {
+    switch (action.type) {
+      case "ADD_ITEM":
+        return {
+          ...state,
+          additionalPrice: state.additionalPrice + action.item.price,
+          car: { ...state.car, features: [...state.car.features, action.item] },
+          additionalFeatures: state.additionalFeatures.filter(feat => feat.id !== action.item.id)
+        }
 
+      default:
 
+        return state;
     }
-    return state;
   }
 
   const removeFeature = item => {
