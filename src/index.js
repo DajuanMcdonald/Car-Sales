@@ -5,9 +5,11 @@ import { Provider } from 'react-redux';
 import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
+import { reducer, initialState } from '../src/reducers/index'
 
-
+// setup Redux store
+const store = createStore(reducer, initialState)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-    <Provider ><App /></Provider>,rootElement);
+    <Provider store={store} ><App /></Provider>,rootElement);
