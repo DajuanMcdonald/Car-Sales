@@ -1,3 +1,5 @@
+import { BUY_ITEM, REMOVE_ITEM } from '../actions'
+
 const initialState = {
     additionalPrice: 0,
     car: {
