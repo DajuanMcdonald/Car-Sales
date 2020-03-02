@@ -23,6 +23,14 @@ const App = () => {
     ]
   };
 
+  const reducer = (state, action) => {
+    return {
+
+
+    }
+    return state;
+  }
+
   const removeFeature = item => {
     // dispatch an action here to remove an item
   };
