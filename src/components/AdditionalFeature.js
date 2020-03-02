@@ -1,6 +1,7 @@
 import React from 'react';
 import AddedFeature from './AddedFeature';
 
+
 const AdditionalFeature = props => {
   return (
     <li>
