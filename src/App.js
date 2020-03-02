@@ -12,6 +12,7 @@ import { buyItem, removeFeature } from '../src/actions/index'
 
 
 const App = (state) => {
+  
 
   return (
     <div className="boxes">

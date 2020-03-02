@@ -5,10 +5,13 @@ import { Provider } from 'react-redux';
 import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
-import { reducer, initialState } from '../src/reducers/index'
+import { reducer, initialState } from './reducers/'
 
 // setup Redux store
-const store = createStore(reducer, initialState)
+const store = createStore(
+    reducer, 
+    initialState, 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
