@@ -18,7 +18,7 @@ const initialState = {
   };
   
   // set up reducer and initial state
-  const reducer = (state, action) => {
+  const reducer = (state = initialState, action) => {
     switch (action.type) {
       case "BUY_ITEM":
         return {
