@@ -8,7 +8,7 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 import { buyItem, removeFeature } from '../src/actions/index'
-import { reducer, initialState } from '../src/reducers/index';
+// import { reducer, initialState } from '../src/reducers/index';
 
 
 const App = (state) => {
