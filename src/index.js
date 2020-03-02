@@ -11,7 +11,12 @@ import { reducer, initialState } from './reducers/'
 const store = createStore(
     reducer, 
     initialState, 
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() 
+    )
+
+    
+
+    console.log('store', store.getState())
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

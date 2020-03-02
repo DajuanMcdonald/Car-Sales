@@ -4,7 +4,7 @@ export const REMOVE_ITEM = 'REMOVE_ITEM';
 
 export const buyItem = item => {
   // dipsatch an action here to add an item
-  return { type: 'BUY_ITEM', payload: item }
+  return { type: BUY_ITEM, payload: item }
 };
 
 export const removeFeature = item => {
