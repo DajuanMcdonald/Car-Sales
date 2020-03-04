@@ -1,5 +1,4 @@
 import React from 'react';
-import { useReducer } from 'react'
 import { connect } from 'react-redux';
 
 import Header from './components/Header';
@@ -12,6 +11,7 @@ import { buyItem, removeFeature } from '../src/actions/index'
 
 
 const App = (state) => {
+  console.log('this app.js' , state)
   
 
   return (
@@ -34,16 +34,14 @@ const App = (state) => {
   );
 };
 
-const mapStateToProps = {
-  buyItem,
-    removeFeature
-}
+const mapStateToProps = state => {
+  return {
 
-
-export default connect(
-  state => ({
     car: state.car,
     additionalFeatures: state.additionalFeatures,
     additionalPrice: state.additionalPrice
-  }),
-  mapStateToProps)(App);
+  }
+}
+
+
+export default connect(mapStateToProps, {buyItem, removeFeature}) (App);
